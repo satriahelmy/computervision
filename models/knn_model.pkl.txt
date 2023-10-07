@@ -1,0 +1,1 @@
+Letakkan file "knn_model.pkl" disini
