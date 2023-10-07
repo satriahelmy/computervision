@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "includes/head.html" %}
+
+<body>
+    {% include "components/navbar.html" %}
+    <form action="/custom_object_detection" enctype="multipart/form-data" method="post">
+        {% include "components/input_files.html" %}
+    </form>
+    {% include "includes/script.html" %}
+
+    {% if result %}
+    <div class="container p-5">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <img src="data:image/jpeg;base64,{{ result }}" alt="" width="50%">
+                <p>{{ class_labels }}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</body>
+
+</html>

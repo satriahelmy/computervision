@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include "includes/head.html" %}
+
+<body>
+    {% include "components/navbar.html" %}
+    <form action="/orange_diseases_classification" enctype="multipart/form-data" method="post">
+        {% include "components/input_files.html" %}
+    </form>
+    {% include "includes/script.html" %}
+
+    {% if result %}
+    <div class="container mt-5 pt-3">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mb-3 d-flex justify-content-center">
+                    <img src="data:image/jpeg;base64,{{ image_path }}" alt="" width="25%" />
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-body">
+                        {% if result == "Fresh" %}
+                        <h5 class="card-title">Tanaman Anda Sehat</h5>
+                        <p class="card-text">Tanaman Anda tidak terkena penyakit.</p>
+                        {% else %}
+                        <h5 class="card-title">Tanaman Anda Sakit</h5>
+                        <p class="card-text">
+                            Nama Penyakit: <strong>{{ result }}</strong>
+                        </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if result != "Fresh" %}
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Deskripsi Penyakit</h5>
+                        <p class="card-text">{{ description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Tindakan Pencegahan</h5>
+                        <p class="card-text">{{ prevention }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Pengobatan</h5>
+                        <p class="card-text">{{ treatment }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    <div class="row justify-content-center mt-3 mb-3">
+        <div class="col-6 text-center">
+            <div class="form-group">
+                <a href="/" class="btn btn-primary">Kembali ke halaman awal</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</body>
+
+</html>

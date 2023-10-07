@@ -1,0 +1,92 @@
+<div class="container">
+    <div class="row justify-content-center text-center">
+        <div class="col-lg-12 p-3">
+            <h3>Computer Vision Task</h3>
+            <div class="row">
+                <div class="col-sm-4 py-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/custom_OD.jpeg') }}" class="card-img-top"
+                            alt="custom-object-detection">
+                        <div class="card-body">
+                            <h5 class="card-title">Custom Object Detection</h5>
+                            <p class="card-text">Looking for information about the ship?</p>
+                            <div class="d-grid gap-2">
+                                <a href="/custom_object_detection" class="btn btn-primary">Predict</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/orange.jpeg') }}" class="card-img-top"
+                            alt="orange-diseases-classification">
+                        <div class="card-body">
+                            <h5 class="card-title">Orange Diseases Classification</h5>
+                            <p class="card-text">Is the orange healthy?</p>
+                            <div class="d-grid gap-2">
+                                <a href="/orange_diseases_classification" class="btn btn-primary">Predict</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/binary.jpeg') }}" class="card-img-top"
+                            alt="Binary Class Image Classification">
+                        <div class="card-body">
+                            <h5 class="card-title">Binary Class Image Classification</h5>
+                            <p class="card-text">Cat vs Dog</p>
+                            <div class="d-grid gap-2">
+                                <a href="/binary_classification" class="btn btn-primary">Predict</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center text-center">
+        <div class="col-lg-12 p-3">
+            <div class="row">
+                <div class="col-sm-4 py-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/multiclass.jpeg') }}" class="card-img-top "
+                            alt="Multi Class Image Classification">
+                        <div class="card-body">
+                            <h5 class="card-title">Multi Class Image Classification</h5>
+                            <p class="card-text">Is the fruit fresh?</p>
+                            <div class="d-grid gap-2">
+                                <a href="/multiclass_classification" class="btn btn-primary">Predict</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/color.jpeg') }}" class="card-img-top"
+                            alt="Color Palette">
+                        <div class="card-body">
+                            <h5 class="card-title">Color Palette</h5>
+                            <p class="card-text">Want to know the color?</p>
+                            <div class="d-grid gap-2">
+                                <a href="/color_palette" class="btn btn-primary">Predict</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 py-3">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='img/ocr.jpg') }}" class="card-img-top" alt="OCR">
+                        <div class="card-body">
+                            <h5 class="card-title">OCR</h5>
+                            <p class="card-text">What's the text in the image?</p>
+                            <div class="d-grid gap-2">
+                                <a href="/ocr" class="btn btn-primary">Predict</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
